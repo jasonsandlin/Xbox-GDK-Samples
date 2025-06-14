@@ -116,6 +116,8 @@
     <LibraryWPath>$(Console_SdkWindowsMetadataPath)</LibraryWPath>
     <ExecutablePath>$(Console_SdkToolPath);$(ExecutablePath)</ExecutablePath>
     <LinkIncremental>false</LinkIncremental>
+    <IncludePath>C:\Program Files (x86)\Microsoft GDK\251000\xbox_gen8\include;$(Console_SdkIncludeRoot);$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Program Files (x86)\Microsoft GDK\251000\xbox_gen8\lib\x64;$(Console_SdkLibPath);$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Gaming.Xbox.Scarlett.x64'">
     <ReferencePath>$(Console_SdkWindowsMetadataPath)</ReferencePath>
@@ -130,6 +132,8 @@
     <LibraryWPath>$(Console_SdkWindowsMetadataPath)</LibraryWPath>
     <ExecutablePath>$(Console_SdkToolPath);$(ExecutablePath)</ExecutablePath>
     <LinkIncremental>false</LinkIncremental>
+    <IncludePath>C:\Program Files (x86)\Microsoft GDK\251000\xbox_gen8\include;$(Console_SdkIncludeRoot);$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Program Files (x86)\Microsoft GDK\251000\xbox_gen8\lib\x64;$(Console_SdkLibPath);$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Profile|Gaming.Xbox.Scarlett.x64'">
     <ReferencePath>$(Console_SdkWindowsMetadataPath)</ReferencePath>
@@ -144,6 +148,8 @@
     <LibraryWPath>$(Console_SdkWindowsMetadataPath)</LibraryWPath>
     <ExecutablePath>$(Console_SdkToolPath);$(ExecutablePath)</ExecutablePath>
     <LinkIncremental>true</LinkIncremental>
+    <IncludePath>C:\Program Files (x86)\Microsoft GDK\251000\xbox_gen8\include;$(Console_SdkIncludeRoot);$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Program Files (x86)\Microsoft GDK\251000\xbox_gen8\lib\x64;$(Console_SdkLibPath);$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Gaming.Xbox.Scarlett.x64'">
     <ReferencePath>$(Console_SdkWindowsMetadataPath)</ReferencePath>
@@ -155,7 +161,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Gaming.Xbox.XboxOne.x64'">
     <Link>
-      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>Microsoft.Xbox.Services.142.GDK.C.lib;PlayFabGameSave.GDK.lib;PlayFabServices.GDK.lib;PlayFabCore.GDK.lib;libHttpClient.GDK.lib;d3d12_x.lib;PIXEvt.lib;xgameruntime.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
@@ -209,7 +215,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Profile|Gaming.Xbox.XboxOne.x64'">
     <Link>
-      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>Microsoft.Xbox.Services.142.GDK.C.lib;PlayFabGameSave.GDK.lib;PlayFabServices.GDK.lib;PlayFabCore.GDK.lib;libHttpClient.GDK.lib;d3d12_x.lib;PIXEvt.lib;xgameruntime.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
@@ -263,7 +269,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Gaming.Xbox.XboxOne.x64'">
     <Link>
-      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>Microsoft.Xbox.Services.142.GDK.C.lib;PlayFabGameSave.GDK.lib;PlayFabServices.GDK.lib;PlayFabCore.GDK.lib;libHttpClient.GDK.lib;d3d12_x.lib;PIXEvt.lib;xgameruntime.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
