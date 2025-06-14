@@ -77,10 +77,10 @@
     </FxCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Readme.docx" />
-    <None Include="SimpleTriangle_ReadMe_ja-jp.docx" />
-    <None Include="SimpleTriangle_ReadMe_ko-kr.docx" />
-    <None Include="SimpleTriangle_ReadMe_zh-cn.docx" />
+    <None Include="readme.md" />
+    <None Include="readme_ja-jp.md" />
+    <None Include="readme_ko-kr.md" />
+    <None Include="readme_zh-cn.md" />
   </ItemGroup>
   <ItemGroup>
     <MGCCompile Include="MicrosoftGameConfig.mgc" />

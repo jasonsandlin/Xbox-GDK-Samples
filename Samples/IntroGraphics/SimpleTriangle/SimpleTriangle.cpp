@@ -10,6 +10,11 @@
 
 #include "ATGColors.h"
 #include "ReadData.h"
+#include <httpclient/httpClient.h>
+#include <playfab/core/PFCore.h>
+#include <playfab/services/PFServices.h>
+#include <playfab/gamesave/PFGameSaveFiles.h>
+#include <xsapi-c/services_c.h>
 
 extern void ExitSample() noexcept;
 
@@ -47,6 +52,22 @@ void Sample::Initialize(HWND window)
 
     m_deviceResources->CreateWindowSizeDependentResources();
     CreateWindowSizeDependentResources();
+
+    HRESULT hr = PFInitialize(nullptr);
+    UNREFERENCED_PARAMETER(hr);
+
+    hr = PFServicesInitialize(nullptr);
+    UNREFERENCED_PARAMETER(hr);
+
+    PFGameSaveInitArgs gsargs{};
+    hr = PFGameSaveFilesInitialize(&gsargs);
+    UNREFERENCED_PARAMETER(hr);
+
+    XblInitArgs xblArgs = {};
+    xblArgs.queue = nullptr;
+    xblArgs.scid = "00000000-0000-0000-0000-000076029b4d";
+    hr = XblInitialize(&xblArgs);
+    UNREFERENCED_PARAMETER(hr);
 }
 
 #pragma region Frame Update
